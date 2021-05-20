@@ -22,13 +22,13 @@ int main()
                 case '[': st.push(j);break;
                 case '(': st.push(j);break;
                 case '}': if(st.empty()|| st.top()!='{')
-                          f=0;
+                            {f=0;break;}
                           st.pop();break;
                 case ']': if(st.empty()||st.top()!='[')
-                            f=0;
+                            {f=0;break;}
                           st.pop(); break;
                 case ')': if(st.empty()||st.top()!='(')
-                          f=0;
+                          {f=0;break;}
                           st.pop();break;
             }
         }
@@ -37,9 +37,6 @@ int main()
         cout<<"YES"<<endl;
         else
         cout<<"NO"<<endl;
-        
-        
-        
     }
 }
 
